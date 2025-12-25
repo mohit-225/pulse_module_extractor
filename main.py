@@ -6,7 +6,6 @@ from datetime import datetime
 
 
 def fetch_page(url):
-    """Fetch HTML content from a given URL."""
     try:
         response = requests.get(url, timeout=10)
         response.raise_for_status()
@@ -17,21 +16,18 @@ def fetch_page(url):
 
 
 def clean_text(text):
-    """Clean and normalize extracted text."""
     if not text:
         return ""
     return " ".join(text.strip().split())
 
 
 def is_valid_heading(text):
-    """Filter out weak or meaningless headings."""
     return text and len(text) > 10
 
 
 def extract_modules(html):
     soup = BeautifulSoup(html, "lxml")
 
-    # Remove irrelevant sections
     for tag in soup(["script", "style", "nav", "footer", "header"]):
         tag.decompose()
 
@@ -45,7 +41,6 @@ def extract_modules(html):
         if not text:
             continue
 
-        # Detect module
         if tag.name == "h1" and is_valid_heading(text):
             key = text.lower()
             if key not in seen_modules:
@@ -56,11 +51,9 @@ def extract_modules(html):
                 modules.append(current_module)
                 seen_modules.add(key)
 
-        # Detect submodules
         elif tag.name in ["h2", "h3"] and current_module:
             current_module["submodules"][text] = ""
 
-        # Append description
         elif tag.name == "p" and current_module:
             if current_module["submodules"]:
                 last_key = list(current_module["submodules"].keys())[-1]
