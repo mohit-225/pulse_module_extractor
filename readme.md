@@ -1,6 +1,6 @@
-# 📘 Module Extraction AI – Documentation Analyzer
+#  Module Extraction AI – Documentation Analyzer
 
-## 📌 Overview
+##  Overview
 
 This project is an **AI-powered documentation analysis tool** that automatically extracts **modules and submodules** from technical documentation websites. It converts unstructured web content into a clean, structured JSON format that is easy to understand, analyze, and reuse.
 
@@ -8,7 +8,7 @@ The tool is designed for real-world documentation such as product help centers, 
 
 ---
 
-## 🎯 Problem Statement
+##  Problem Statement
 
 Modern documentation platforms contain large volumes of unstructured information. Manually analyzing and organizing this content is time-consuming and inefficient.
 
@@ -19,7 +19,7 @@ The goal of this project is to:
 
 ---
 
-## 🧠 How the System Works
+##  How the System Works
 
 1. Accepts a documentation URL as input  
 2. Fetches the webpage content  
@@ -31,7 +31,7 @@ The goal of this project is to:
 
 ---
 
-## 🧩 Key Features
+##  Key Features
 
 - Automatic extraction of documentation structure  
 - Intelligent heading-based parsing  
@@ -41,7 +41,7 @@ The goal of this project is to:
 
 ---
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 | Component | Technology |
 |-----------|------------|
@@ -52,7 +52,7 @@ The goal of this project is to:
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 pulse-module-extractor/
@@ -65,15 +65,15 @@ pulse-module-extractor/
 
 ---
 
-## 🚀 How to Run the Project
+##  How to Run the Project
 
-### 1️⃣ Install Dependencies
+### 1️ Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2️⃣ Run the Script
+### 2️ Run the Script
 
 ```bash
 python main.py --url https://wordpress.org/support/
@@ -81,7 +81,7 @@ python main.py --url https://wordpress.org/support/
 
 ---
 
-## 📄 Sample Output
+##  Sample Output
 
 ```json
 {
@@ -101,7 +101,7 @@ python main.py --url https://wordpress.org/support/
 
 ---
 
-## 🧠 Design Considerations
+##  Design Considerations
 
 - HTML heading hierarchy is used to preserve document structure
 - Redundant and irrelevant content is filtered out
@@ -110,7 +110,7 @@ python main.py --url https://wordpress.org/support/
 
 ---
 
-## 🔮 Future Enhancements
+##  Future Enhancements
 
 - Support for JavaScript-rendered documentation using Playwright
 - NLP-based semantic grouping of topics
@@ -119,6 +119,6 @@ python main.py --url https://wordpress.org/support/
 
 ---
 
-## ✅ Conclusion
+##  Conclusion
 
 This project demonstrates a practical and effective approach to transforming unstructured documentation into structured, machine-readable data. It highlights clean engineering practices, strong problem-solving skills, and real-world applicability.
